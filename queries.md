@@ -359,3 +359,43 @@
   }
 }
 ```
+
+# 8. Vehicles and Their Costs: names and cost in credits for 3 vehicles
+
+# Query
+
+```GraphQL
+{
+ allVehicles(first:3){
+  vehicles{
+    name
+    costInCredits
+  	}
+	}
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "allVehicles": {
+      "vehicles": [
+        {
+          "name": "Sand Crawler",
+          "costInCredits": 150000
+        },
+        {
+          "name": "T-16 skyhopper",
+          "costInCredits": 14500
+        },
+        {
+          "name": "X-34 landspeeder",
+          "costInCredits": 10550
+        }
+      ]
+    }
+  }
+}
+```
