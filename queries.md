@@ -111,3 +111,43 @@
   }
 }
 ```
+
+# 4. Starships Information: Names and models of 3 starships
+
+# Query
+
+```GraphQL
+{
+  allStarships (last: 3){
+    starships {
+      name
+      model
+    }
+  }
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "allStarships": {
+      "starships": [
+        {
+          "name": "Belbullab-22 starfighter",
+          "model": "Belbullab-22 starfighter"
+        },
+        {
+          "name": "V-wing",
+          "model": "Alpha-3 Nimbus-class V-wing starfighter"
+        },
+        {
+          "name": "T-70 X-wing fighter",
+          "model": "T-70 X-wing fighter"
+        }
+      ]
+    }
+  }
+}
+```
