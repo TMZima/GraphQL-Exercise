@@ -300,3 +300,62 @@
   }
 }
 ```
+
+# 7. Planets and Their Climates: 5 planets
+
+# Query
+
+```GraphQL
+{
+ allPlanets(first:5) {
+  planets {
+    name
+    climates
+  	}
+	}
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "allPlanets": {
+      "planets": [
+        {
+          "name": "Tatooine",
+          "climates": [
+            "arid"
+          ]
+        },
+        {
+          "name": "Alderaan",
+          "climates": [
+            "temperate"
+          ]
+        },
+        {
+          "name": "Yavin IV",
+          "climates": [
+            "temperate",
+            "tropical"
+          ]
+        },
+        {
+          "name": "Hoth",
+          "climates": [
+            "frozen"
+          ]
+        },
+        {
+          "name": "Dagobah",
+          "climates": [
+            "murky"
+          ]
+        }
+      ]
+    }
+  }
+}
+```
