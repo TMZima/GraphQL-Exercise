@@ -69,3 +69,45 @@
   }
 }
 ```
+
+# 3. Explore Planets - First 5 planets
+
+# Query
+
+```GraphQL
+{
+  allPlanets(first:5) {
+    planets {
+      name
+    }
+  }
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "allPlanets": {
+      "planets": [
+        {
+          "name": "Tatooine"
+        },
+        {
+          "name": "Alderaan"
+        },
+        {
+          "name": "Yavin IV"
+        },
+        {
+          "name": "Hoth"
+        },
+        {
+          "name": "Dagobah"
+        }
+      ]
+    }
+  }
+}
+```
