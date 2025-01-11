@@ -1,3 +1,5 @@
+#### Basic Tasks:
+
 # 1. List All films
 
 ### Query
@@ -145,6 +147,93 @@
         {
           "name": "T-70 X-wing fighter",
           "model": "T-70 X-wing fighter"
+        }
+      ]
+    }
+  }
+}
+```
+
+### Intermediate Tasks:
+
+# 5. Character and Their Starships - For each of the first 5 characters, list the names of starships they've piloted.
+
+# Query
+
+```GraphQL
+{
+  allPeople(first:5){
+    edges{
+      node {
+        name
+        starshipConnection{
+          starships {
+            name
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "allPeople": {
+      "edges": [
+        {
+          "node": {
+            "name": "Luke Skywalker",
+            "starshipConnection": {
+              "starships": [
+                {
+                  "name": "X-wing"
+                },
+                {
+                  "name": "Imperial shuttle"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "C-3PO",
+            "starshipConnection": {
+              "starships": []
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "R2-D2",
+            "starshipConnection": {
+              "starships": []
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Darth Vader",
+            "starshipConnection": {
+              "starships": [
+                {
+                  "name": "TIE Advanced x1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Leia Organa",
+            "starshipConnection": {
+              "starships": []
+            }
+          }
         }
       ]
     }
