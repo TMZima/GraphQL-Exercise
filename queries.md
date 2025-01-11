@@ -240,3 +240,63 @@
   }
 }
 ```
+
+# 6. Species and Their Languages: Names and languages of 5 species
+
+# Query
+
+```GraphQL
+{
+ allSpecies(last:5){
+  edges {
+		node {
+    	name
+    	language
+  		}
+ 		}
+	}
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "allSpecies": {
+      "edges": [
+        {
+          "node": {
+            "name": "Skakoan",
+            "language": "Skakoan"
+          }
+        },
+        {
+          "node": {
+            "name": "Muun",
+            "language": "Muun"
+          }
+        },
+        {
+          "node": {
+            "name": "Togruta",
+            "language": "Togruti"
+          }
+        },
+        {
+          "node": {
+            "name": "Kaleesh",
+            "language": "Kaleesh"
+          }
+        },
+        {
+          "node": {
+            "name": "Pau'an",
+            "language": "Utapese"
+          }
+        }
+      ]
+    }
+  }
+}
+```
