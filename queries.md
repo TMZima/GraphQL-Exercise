@@ -12,7 +12,7 @@
 }
 ```
 
-### Result
+### Response
 
 ```JSON
 {
@@ -41,6 +41,30 @@
           "title": "The Force Awakens"
         }
       ]
+    }
+  }
+}
+```
+
+# 2. Fetch a Specific Character
+
+# Query
+
+```GraphQL
+{
+  person (id:"cGVvcGxlOjM="){
+    name
+  }
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "person": {
+      "name": "R2-D2"
     }
   }
 }
