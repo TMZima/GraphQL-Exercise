@@ -534,3 +534,731 @@
   }
 }
 ```
+
+# 10. Multi-Film Characters: appearing in more than one film
+
+# Query
+
+```GraphQL
+{
+  allPeople {
+    edges {
+      node {
+        name
+        filmConnection {
+          totalCount
+        }
+      }
+    }
+  }
+}
+```
+
+# Response - will need to be filtered to get the ones in more than one film.
+
+```JSON
+{
+  "data": {
+    "allPeople": {
+      "edges": [
+        {
+          "node": {
+            "name": "Luke Skywalker",
+            "filmConnection": {
+              "totalCount": 5
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "C-3PO",
+            "filmConnection": {
+              "totalCount": 6
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "R2-D2",
+            "filmConnection": {
+              "totalCount": 7
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Darth Vader",
+            "filmConnection": {
+              "totalCount": 4
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Leia Organa",
+            "filmConnection": {
+              "totalCount": 5
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Owen Lars",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Beru Whitesun lars",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "R5-D4",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Biggs Darklighter",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Obi-Wan Kenobi",
+            "filmConnection": {
+              "totalCount": 6
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Anakin Skywalker",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Wilhuff Tarkin",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Chewbacca",
+            "filmConnection": {
+              "totalCount": 5
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Han Solo",
+            "filmConnection": {
+              "totalCount": 4
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Greedo",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Jabba Desilijic Tiure",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Wedge Antilles",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Jek Tono Porkins",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Yoda",
+            "filmConnection": {
+              "totalCount": 5
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Palpatine",
+            "filmConnection": {
+              "totalCount": 5
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Boba Fett",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "IG-88",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Bossk",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Lando Calrissian",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Lobot",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Ackbar",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Mon Mothma",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Arvel Crynyd",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Wicket Systri Warrick",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Nien Nunb",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Qui-Gon Jinn",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Nute Gunray",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Finis Valorum",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Padmé Amidala",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Jar Jar Binks",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Roos Tarpals",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Rugor Nass",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Ric Olié",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Watto",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Sebulba",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Quarsh Panaka",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Shmi Skywalker",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Darth Maul",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Bib Fortuna",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Ayla Secura",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Ratts Tyerell",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Dud Bolt",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Gasgano",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Ben Quadinaros",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Mace Windu",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Ki-Adi-Mundi",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Kit Fisto",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Eeth Koth",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Adi Gallia",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Saesee Tiin",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Yarael Poof",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Plo Koon",
+            "filmConnection": {
+              "totalCount": 3
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Mas Amedda",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Gregar Typho",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Cordé",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Cliegg Lars",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Poggle the Lesser",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Luminara Unduli",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Barriss Offee",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Dormé",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Dooku",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Bail Prestor Organa",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Jango Fett",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Zam Wesell",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Dexter Jettster",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Lama Su",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Taun We",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Jocasta Nu",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "R4-P17",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Wat Tambor",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "San Hill",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Shaak Ti",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Grievous",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Tarfful",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Raymus Antilles",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Sly Moore",
+            "filmConnection": {
+              "totalCount": 2
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Tion Medon",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Finn",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Rey",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Poe Dameron",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "BB8",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Captain Phasma",
+            "filmConnection": {
+              "totalCount": 1
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+```
