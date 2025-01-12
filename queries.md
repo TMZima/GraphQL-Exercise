@@ -1342,3 +1342,88 @@
   }
 }
 ```
+
+### Complex Tasks:
+
+# 12. Full Character Profiles: full profile for a given character, including films, starships, and homeworld.
+
+# Query
+
+```GraphQL
+{
+  person(id:"cGVvcGxlOjEw") {
+    name
+    birthYear
+    homeworld {
+      name
+    }
+    filmConnection {
+      films {
+        title
+      }
+    }
+    starshipConnection {
+      starships {
+        name
+      }
+    }
+  }
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "person": {
+      "name": "Obi-Wan Kenobi",
+      "birthYear": "57BBY",
+      "homeworld": {
+        "name": "Stewjon"
+      },
+      "filmConnection": {
+        "films": [
+          {
+            "title": "A New Hope"
+          },
+          {
+            "title": "The Empire Strikes Back"
+          },
+          {
+            "title": "Return of the Jedi"
+          },
+          {
+            "title": "The Phantom Menace"
+          },
+          {
+            "title": "Attack of the Clones"
+          },
+          {
+            "title": "Revenge of the Sith"
+          }
+        ]
+      },
+      "starshipConnection": {
+        "starships": [
+          {
+            "name": "Jedi starfighter"
+          },
+          {
+            "name": "Trade Federation cruiser"
+          },
+          {
+            "name": "Naboo star skiff"
+          },
+          {
+            "name": "Jedi Interceptor"
+          },
+          {
+            "name": "Belbullab-22 starfighter"
+          }
+        ]
+      }
+    }
+  }
+}
+```
