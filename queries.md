@@ -1427,3 +1427,63 @@
   }
 }
 ```
+
+# 13. Link Characters with Their Plants: Query the first 5 characters, including the name and population of their homeworld.
+
+# Query
+
+```GraphQL
+{
+  allPeople(first:5) {
+    people {
+      homeworld {
+        name
+        population
+      }
+    }
+  }
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "allPeople": {
+      "people": [
+        {
+          "homeworld": {
+            "name": "Tatooine",
+            "population": 200000
+          }
+        },
+        {
+          "homeworld": {
+            "name": "Tatooine",
+            "population": 200000
+          }
+        },
+        {
+          "homeworld": {
+            "name": "Naboo",
+            "population": 4500000000
+          }
+        },
+        {
+          "homeworld": {
+            "name": "Tatooine",
+            "population": 200000
+          }
+        },
+        {
+          "homeworld": {
+            "name": "Alderaan",
+            "population": 2000000000
+          }
+        }
+      ]
+    }
+  }
+}
+```
