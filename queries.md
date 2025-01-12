@@ -1262,3 +1262,83 @@
   }
 }
 ```
+
+# 11. Aggregate Film Statistics: Calculate the total number of characters across all films.
+
+# Query
+
+```GraphQL
+{
+  allFilms {
+    edges {
+      node {
+        characterConnection {
+          totalCount
+        }
+      }
+    }
+  }
+}
+```
+
+# Response - needs to be summed to get the total numbner of characters across all films.
+
+```JSON
+{
+  "data": {
+    "allFilms": {
+      "edges": [
+        {
+          "node": {
+            "characterConnection": {
+              "totalCount": 18
+            }
+          }
+        },
+        {
+          "node": {
+            "characterConnection": {
+              "totalCount": 16
+            }
+          }
+        },
+        {
+          "node": {
+            "characterConnection": {
+              "totalCount": 20
+            }
+          }
+        },
+        {
+          "node": {
+            "characterConnection": {
+              "totalCount": 34
+            }
+          }
+        },
+        {
+          "node": {
+            "characterConnection": {
+              "totalCount": 40
+            }
+          }
+        },
+        {
+          "node": {
+            "characterConnection": {
+              "totalCount": 34
+            }
+          }
+        },
+        {
+          "node": {
+            "characterConnection": {
+              "totalCount": 11
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+```
