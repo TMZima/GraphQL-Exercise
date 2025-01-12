@@ -1487,3 +1487,56 @@
   }
 }
 ```
+
+# 14. Vehicles, Their Pilots, and Pilots' Species: first 3 vehicles, list their names, pilots, and the species of those pilots
+
+# Query
+
+```GraphQl
+{
+  allVehicles(first:3) {
+    vehicles {
+      name
+      pilotConnection {
+        pilots {
+          name
+          species {
+            name
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "allVehicles": {
+      "vehicles": [
+        {
+          "name": "Sand Crawler",
+          "pilotConnection": {
+            "pilots": []
+          }
+        },
+        {
+          "name": "T-16 skyhopper",
+          "pilotConnection": {
+            "pilots": []
+          }
+        },
+        {
+          "name": "X-34 landspeeder",
+          "pilotConnection": {
+            "pilots": []
+          }
+        }
+      ]
+    }
+  }
+}
+```
