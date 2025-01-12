@@ -399,3 +399,138 @@
   }
 }
 ```
+
+### Advanced Tasks:
+
+# 9. Characters in a Specific Film: List all characters appearing in a given film by ID.
+
+# Query
+
+```GraphQL
+{
+  film(id:"ZmlsbXM6NA==") {
+    characterConnection {
+      characters {
+        name
+      }
+    }
+  }
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "film": {
+      "characterConnection": {
+        "characters": [
+          {
+            "name": "C-3PO"
+          },
+          {
+            "name": "R2-D2"
+          },
+          {
+            "name": "Obi-Wan Kenobi"
+          },
+          {
+            "name": "Anakin Skywalker"
+          },
+          {
+            "name": "Jabba Desilijic Tiure"
+          },
+          {
+            "name": "Yoda"
+          },
+          {
+            "name": "Palpatine"
+          },
+          {
+            "name": "Qui-Gon Jinn"
+          },
+          {
+            "name": "Nute Gunray"
+          },
+          {
+            "name": "Finis Valorum"
+          },
+          {
+            "name": "Padmé Amidala"
+          },
+          {
+            "name": "Jar Jar Binks"
+          },
+          {
+            "name": "Roos Tarpals"
+          },
+          {
+            "name": "Rugor Nass"
+          },
+          {
+            "name": "Ric Olié"
+          },
+          {
+            "name": "Watto"
+          },
+          {
+            "name": "Sebulba"
+          },
+          {
+            "name": "Quarsh Panaka"
+          },
+          {
+            "name": "Shmi Skywalker"
+          },
+          {
+            "name": "Darth Maul"
+          },
+          {
+            "name": "Ayla Secura"
+          },
+          {
+            "name": "Ratts Tyerell"
+          },
+          {
+            "name": "Dud Bolt"
+          },
+          {
+            "name": "Gasgano"
+          },
+          {
+            "name": "Ben Quadinaros"
+          },
+          {
+            "name": "Mace Windu"
+          },
+          {
+            "name": "Ki-Adi-Mundi"
+          },
+          {
+            "name": "Kit Fisto"
+          },
+          {
+            "name": "Eeth Koth"
+          },
+          {
+            "name": "Adi Gallia"
+          },
+          {
+            "name": "Saesee Tiin"
+          },
+          {
+            "name": "Yarael Poof"
+          },
+          {
+            "name": "Plo Koon"
+          },
+          {
+            "name": "Mas Amedda"
+          }
+        ]
+      }
+    }
+  }
+}
+```
