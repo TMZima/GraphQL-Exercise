@@ -1540,3 +1540,375 @@
   }
 }
 ```
+
+# 15. Films and Their Associated Entities: First 3 films, list all related characters, planets, and starships
+
+# Query
+
+```GraphQL
+{
+  allFilms(first:3) {
+    films {
+      title
+      characterConnection {
+        characters {
+          name
+        }
+      }
+      planetConnection {
+        planets {
+          name
+        }
+      }
+      starshipConnection {
+        starships {
+          name
+        }
+      }
+    }
+  }
+}
+```
+
+# Response
+
+```JSON
+{
+  "data": {
+    "allFilms": {
+      "films": [
+        {
+          "title": "A New Hope",
+          "characterConnection": {
+            "characters": [
+              {
+                "name": "Luke Skywalker"
+              },
+              {
+                "name": "C-3PO"
+              },
+              {
+                "name": "R2-D2"
+              },
+              {
+                "name": "Darth Vader"
+              },
+              {
+                "name": "Leia Organa"
+              },
+              {
+                "name": "Owen Lars"
+              },
+              {
+                "name": "Beru Whitesun lars"
+              },
+              {
+                "name": "R5-D4"
+              },
+              {
+                "name": "Biggs Darklighter"
+              },
+              {
+                "name": "Obi-Wan Kenobi"
+              },
+              {
+                "name": "Wilhuff Tarkin"
+              },
+              {
+                "name": "Chewbacca"
+              },
+              {
+                "name": "Han Solo"
+              },
+              {
+                "name": "Greedo"
+              },
+              {
+                "name": "Jabba Desilijic Tiure"
+              },
+              {
+                "name": "Wedge Antilles"
+              },
+              {
+                "name": "Jek Tono Porkins"
+              },
+              {
+                "name": "Raymus Antilles"
+              }
+            ]
+          },
+          "planetConnection": {
+            "planets": [
+              {
+                "name": "Tatooine"
+              },
+              {
+                "name": "Alderaan"
+              },
+              {
+                "name": "Yavin IV"
+              }
+            ]
+          },
+          "starshipConnection": {
+            "starships": [
+              {
+                "name": "CR90 corvette"
+              },
+              {
+                "name": "Star Destroyer"
+              },
+              {
+                "name": "Sentinel-class landing craft"
+              },
+              {
+                "name": "Death Star"
+              },
+              {
+                "name": "Millennium Falcon"
+              },
+              {
+                "name": "Y-wing"
+              },
+              {
+                "name": "X-wing"
+              },
+              {
+                "name": "TIE Advanced x1"
+              }
+            ]
+          }
+        },
+        {
+          "title": "The Empire Strikes Back",
+          "characterConnection": {
+            "characters": [
+              {
+                "name": "Luke Skywalker"
+              },
+              {
+                "name": "C-3PO"
+              },
+              {
+                "name": "R2-D2"
+              },
+              {
+                "name": "Darth Vader"
+              },
+              {
+                "name": "Leia Organa"
+              },
+              {
+                "name": "Obi-Wan Kenobi"
+              },
+              {
+                "name": "Chewbacca"
+              },
+              {
+                "name": "Han Solo"
+              },
+              {
+                "name": "Wedge Antilles"
+              },
+              {
+                "name": "Yoda"
+              },
+              {
+                "name": "Palpatine"
+              },
+              {
+                "name": "Boba Fett"
+              },
+              {
+                "name": "IG-88"
+              },
+              {
+                "name": "Bossk"
+              },
+              {
+                "name": "Lando Calrissian"
+              },
+              {
+                "name": "Lobot"
+              }
+            ]
+          },
+          "planetConnection": {
+            "planets": [
+              {
+                "name": "Hoth"
+              },
+              {
+                "name": "Dagobah"
+              },
+              {
+                "name": "Bespin"
+              },
+              {
+                "name": "Ord Mantell"
+              }
+            ]
+          },
+          "starshipConnection": {
+            "starships": [
+              {
+                "name": "Star Destroyer"
+              },
+              {
+                "name": "Millennium Falcon"
+              },
+              {
+                "name": "Y-wing"
+              },
+              {
+                "name": "X-wing"
+              },
+              {
+                "name": "Executor"
+              },
+              {
+                "name": "Rebel transport"
+              },
+              {
+                "name": "Slave 1"
+              },
+              {
+                "name": "Imperial shuttle"
+              },
+              {
+                "name": "EF76 Nebulon-B escort frigate"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Return of the Jedi",
+          "characterConnection": {
+            "characters": [
+              {
+                "name": "Luke Skywalker"
+              },
+              {
+                "name": "C-3PO"
+              },
+              {
+                "name": "R2-D2"
+              },
+              {
+                "name": "Darth Vader"
+              },
+              {
+                "name": "Leia Organa"
+              },
+              {
+                "name": "Obi-Wan Kenobi"
+              },
+              {
+                "name": "Chewbacca"
+              },
+              {
+                "name": "Han Solo"
+              },
+              {
+                "name": "Jabba Desilijic Tiure"
+              },
+              {
+                "name": "Wedge Antilles"
+              },
+              {
+                "name": "Yoda"
+              },
+              {
+                "name": "Palpatine"
+              },
+              {
+                "name": "Boba Fett"
+              },
+              {
+                "name": "Lando Calrissian"
+              },
+              {
+                "name": "Ackbar"
+              },
+              {
+                "name": "Mon Mothma"
+              },
+              {
+                "name": "Arvel Crynyd"
+              },
+              {
+                "name": "Wicket Systri Warrick"
+              },
+              {
+                "name": "Nien Nunb"
+              },
+              {
+                "name": "Bib Fortuna"
+              }
+            ]
+          },
+          "planetConnection": {
+            "planets": [
+              {
+                "name": "Tatooine"
+              },
+              {
+                "name": "Dagobah"
+              },
+              {
+                "name": "Endor"
+              },
+              {
+                "name": "Naboo"
+              },
+              {
+                "name": "Coruscant"
+              }
+            ]
+          },
+          "starshipConnection": {
+            "starships": [
+              {
+                "name": "CR90 corvette"
+              },
+              {
+                "name": "Star Destroyer"
+              },
+              {
+                "name": "Millennium Falcon"
+              },
+              {
+                "name": "Y-wing"
+              },
+              {
+                "name": "X-wing"
+              },
+              {
+                "name": "Executor"
+              },
+              {
+                "name": "Rebel transport"
+              },
+              {
+                "name": "Imperial shuttle"
+              },
+              {
+                "name": "EF76 Nebulon-B escort frigate"
+              },
+              {
+                "name": "Calamari Cruiser"
+              },
+              {
+                "name": "A-wing"
+              },
+              {
+                "name": "B-wing"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+```
